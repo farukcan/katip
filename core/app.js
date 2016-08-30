@@ -4,7 +4,10 @@
 
 // Framework hakkında bilgilere erişmek için : var
 var Framework = {
-	version : "1.0.0"
+	version : "1.0.0",
+	Settings : {
+		Restart : true
+	}
 };
 
 // Mod gerekliyse yükle,yüklüyse yükleme
@@ -17,6 +20,15 @@ var gerekli_mod = function(mod_name){
 // readFile : dosya okuma fonksiyonu
 var readFile = function(file){
 	return fs.readFileSync(file).toString();
+}
+
+var exit = function(){
+		process.exit(1);
+}
+
+var restart = function(){
+	if(Framework.Settings.Restart)
+		exit();
 }
 
 /* FM , fs moduna ihtıyaç duyar */

@@ -6,3 +6,6 @@ const Project = {
 const Settings = {
 
 };
+
+// Framework Settings
+Framework.Settings.Restart = true;
